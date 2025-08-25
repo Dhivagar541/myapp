@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                git 'https://github.com/Dhivagar541/myapp'
+                git branch: 'main', url: 'https://github.com/Dhivagar541/myapp'
             }
         }
         stage('Build Docker Image') {
