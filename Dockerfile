@@ -1,7 +1,4 @@
-FROM node:20
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 8080
-CMD ["node", "app.js"]
+FROM python:3.10-slim
+WORKDIR /app
+COPY app.py .
+CMD ["python", "app.py"]
